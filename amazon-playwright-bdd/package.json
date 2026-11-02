@@ -1,0 +1,48 @@
+{
+  "name": "amazon-playwright-bdd",
+  "version": "1.0.0",
+  "description": "BDD UI automation framework for Amazon using Playwright, Cucumber and TypeScript",
+  "private": true,
+  "type": "commonjs",
+  "scripts": {
+    "test": "cucumber-js",
+    "test:smoke": "cucumber-js --tags @smoke",
+    "test:regression": "cucumber-js --tags @regression",
+    "test:headed": "cross-env HEADLESS=false cucumber-js",
+    "test:dry": "cucumber-js --dry-run",
+    "test:rerun": "cucumber-js @reports/rerun.txt",
+    "report:allure": "allure generate allure-results -o allure-report",
+    "report:open": "allure open allure-report",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "format": "prettier --write .",
+    "install:browsers": "playwright install chromium firefox webkit"
+  },
+  "keywords": [
+    "playwright",
+    "cucumber",
+    "bdd",
+    "typescript"
+  ],
+  "devDependencies": {
+    "@cucumber/cucumber": "^13.3.0",
+    "@eslint/js": "^10.0.1",
+    "@faker-js/faker": "^10.6.0",
+    "@playwright/test": "^1.64.1",
+    "@types/node": "^24.19.2",
+    "ajv": "^8.20.0",
+    "ajv-formats": "^3.0.1",
+    "allure": "^3.22.1",
+    "allure-cucumberjs": "^3.14.0",
+    "cross-env": "^10.1.0",
+    "dotenv": "^18.0.9",
+    "eslint": "^10.14.0",
+    "eslint-config-prettier": "^10.1.8",
+    "prettier": "^3.9.10",
+    "tsx": "^4.23.15",
+    "typescript": "~6.0.3",
+    "typescript-eslint": "^8.72.1",
+    "winston": "^3.19.0"
+  }
+}
